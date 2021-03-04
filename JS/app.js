@@ -1,28 +1,7 @@
 const nombreUsuario = prompt("Por favor ingresar su nombre:");
 const lugar = prompt(
-  `¡Bienvenido ${nombreUsuario} al auomatizador de viajes! Elige el tipo de destino: Playa/Campo/Ciudad`
+  `¡${nombreUsuario} bienvenido  al auomatizador de viajes! Elige el tipo de destino: Playa/Campo/Ciudad`
 ).toUpperCase();
-const departamentos = [
-  "Artigas",
-  "Canelones",
-  "Cerro Largo",
-  "Colonia",
-  "Durazno",
-  "Flores",
-  "Florida",
-  "Lavalleja",
-  "Maldonado",
-  "Montevideo",
-  "Paysandú",
-  "Río Negro",
-  "Rivera",
-  "Rocha",
-  "Salto",
-  "San José",
-  "Soriano",
-  "Tacuarembó",
-  "Treinta y Tres",
-];
 
 function contador() {
   switch (lugar) {
@@ -45,13 +24,24 @@ function contador() {
       console.log(`${nombreUsuario} no has elegido un destino correcto`);
       break;
   }
-
+  let costo = tiempo * 500,
+    descuento = costo * 0.1,
+    descuento2 = costo * 0.2,
+    total = costo - descuento,
+    total2 = costo - descuento2;
   if (tiempo > 0 && tiempo < 5) {
-    alert(`Muy bien ${nombreUsuario} has elegido hospedarte ${tiempo} días`);
+    alert(
+      `Muy bien ${nombreUsuario} has elegido hospedarte ${tiempo} días y su costo es de $${costo}`
+    );
   } else if (tiempo > 5 && tiempo <= 7) {
-    alert(`Muy bien ${nombreUsuario} has elegido hospedarte ${tiempo} días`);
+    alert(
+      `Muy bien ${nombreUsuario} has elegido hospedarte ${tiempo} días y su costo es de $${total}`
+    );
   } else {
-    alert(`Muy bien ${nombreUsuario} has elegido hospedarte ${tiempo} días`);
+    alert(
+      `Muy bien ${nombreUsuario} has elegido hospedarte ${tiempo} días y su costo es de $${total2}`
+    );
   }
 }
+
 contador();
