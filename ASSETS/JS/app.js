@@ -7,12 +7,8 @@ document.getElementById("nombreDeUsuario").innerHTML = `${nombreUsuario}`;
 
 
 
-
-<<<<<<< Updated upstream
 //Calcula el precio segun la cantidad de dias
-=======
 
->>>>>>> Stashed changes
 // const lugar = prompt(
 //   `¡${nombreUsuario} bienvenido  al auomatizador de viajes! Elige el tipo de destino: Playa/Campo/Ciudad`
 // ).toUpperCase();
