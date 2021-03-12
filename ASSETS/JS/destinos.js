@@ -363,7 +363,7 @@ class viaje {
     viaje30,
     viaje31,
     viaje32,
-    viaje32,
+    viaje33,
     viaje34,
     viaje35,
     viaje36,
@@ -371,7 +371,7 @@ class viaje {
     viaje38,
     viaje39,
     viaje40,
-    viaje41,
+    viaje41
   ];
   for (const viaje of viajes) {
     let departamento = viaje.departamento;
