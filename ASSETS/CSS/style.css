@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-color: rgba(240, 243, 246, 0.904);
+
+}
+
+.contenedor {
+    width: 80%;
+    margin: auto;
+}
+
+.titulosDeSecciones {
+    text-align: center;
+    font-size: 2rem;
+    padding: 4rem;
+    margin-top: 0;
+}
+
+.cajaOpciones {
+    width: 100%;
+
+}
+
+.footer {
+    margin-bottom: 0;
+}
+
+.resultados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+main {
+    background-color: rgba(206, 235, 246, 0.883);
+    padding: 1rem;
+}
+
+.opcionDestino {
+    border: solid 1px whitesmoke;
+}
