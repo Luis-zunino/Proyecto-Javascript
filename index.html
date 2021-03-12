@@ -6,13 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+    <link rel="stylesheet" href="ASSETS/CSS/style.css">
 </head>
-<main id="cargarDatos">
 
+<!-- Mapa intereactivo con los diferentes puntos de montevideo y etc -->
+<section>
+    <h2 class="titulosDeSecciones">
+        Bienvenido <span id="nombreDeUsuario"></span> elige tu destino y nosotros por ti el camino!
+    </h2>
+</section>
+<main class="contenedor">
+    <div class="cajaOpciones">
+        <select name="Departamentos">
+            <option value="0">--Departamento--</option>
+            <option id="artigas" value="1">Artigas</option>
+            <option id="canelones" value="2">Canelones</option>
+            <option id="cerrolargo" value="3">Cerro Largo</option>
+            <option id="colonia" value="4">Colonia</option>
+            <option id="durazno" value="5">Durazno</option>
+            <option id="flores" value="6">Flores</option>
+            <option id="florida" value="7">Florida</option>
+            <option id="lavalleja" value="8">Lavalleja</option>
+            <option id="maldonado" value="9">Maldonado</option>
+            <option id="montevideo" value="10">Montevideo</option>
+            <option id="paysandu" value="11">Paysandú</option>
+            <option id="rionegro" value="12">Río Negro</option>
+            <option id="rivera" value="13">Rivera</option>
+            <option id="rocha" value="14">Rocha</option>
+            <option id="salto" value="15">Salto</option>
+            <option id="sanjose" value="16">San José</option>
+            <option id="soriano" value="17">Soriano</option>
+            <option id="tacuarembo" value="18">Tacuarembó</option>
+            <option id="treintaytres" value="19">Treinta y Tres</option>
+
+        </select>
+        <select name="Tipos">
+            <option value="0">--Elige--</option>
+            <option value="3">Camping</option>
+            <option value="2">Ciudad</option>
+            <option value="1">Playas</option>
+        </select>
+        <div class="ordenador">
+            <i class="fas fa-sort-numeric-up"></i>
+            <i class="fas fa-sort-alpha-up"></i>
+        </div>
+    </div>
+    <h1>Lugares</h1>
+    <div class="resultados" id="viajes">
+    </div>
 </main>
 
-<body>
-    <script src="JS/app.js"></script>
+<footer class="titulosDeSecciones footer">
+
+</footer>
+ <script src="ASSETS/JS/app.js"></script>
+<script src="ASSETS/JS/destinos.js"></script>
 </body>
 
 </html>
