@@ -1,11 +1,41 @@
 const nombreUsuario = prompt("Por favor ingresar su nombre:");
 document.getElementById("nombreDeUsuario").innerHTML = `${nombreUsuario}`;
 
+//Listar Departamentos
+let depas = [
+  "--Departamento--",
+  "Artigas",
+  "Canelones",
+  "Cerrolargo",
+  "Colonia",
+  "Durazno",
+  "Flores",
+  "Florida",
+  "Lavalleja",
+  "Maldonado",
+  "Montevideo",
+  "Paysandu",
+  "Río Negro",
+  "Rivera",
+  "Rocha",
+  "Salto",
+  "San José",
+  "Soriano",
+  "Tacuarembo",
+  "Treinta y Tres",
+];
+let depa = document.getElementById("depa");
 
+for (i = 0; i < depas.length; i++) {
+  depa.innerHTML += `<option id="${i}">${depas[i]}</option>`;
+}
+//Tipos de lugares
+let tipo = ["--Elige una opción--", "Espacios Verdes", "Playas", "Ciudades"];
+let tipos = document.getElementById("tipos");
 
-
-
-
+for (i = 0; i < tipo.length; i++) {
+  tipos.innerHTML += `<option id="${i}">${tipo[i]}</option>`;
+}
 
 //Calcula el precio segun la cantidad de dias
 
