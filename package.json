@@ -15,5 +15,9 @@
     "url": "https://github.com/Luis-zunino/Proyecto-Javascript/issues"
   },
   "homepage": "https://github.com/Luis-zunino/Proyecto-Javascript#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7"
+  }
 }
