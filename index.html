@@ -8,17 +8,25 @@
     <title>JavaScript</title>
     <link rel="stylesheet" href="ASSETS/CSS/style.css">
 </head>
-
+<nav>
+    <a href="">Inicio</a>
+    <a href="">Lugares</a>
+    <a href="">Contacto</a>
+</nav>
 <!-- Mapa intereactivo con los diferentes puntos de montevideo y etc -->
 <section>
-    <h2 class="titulosDeSecciones">
-        Bienvenido <span id="nombreDeUsuario"></span> elige tu destino y nosotros por ti el camino!
-    </h2>
+    <h1 id="formulario" class="titulosDeSecciones">
+
+        <input type="text" id="textonombre">
+        <input type="button" id="nombreboton" value="Enviar">
+
+    </h1>
+
 </section>
 <main class="contenedor">
     <div class="cajaOpciones">
         <select id="depa">
-           <!--Listar Departamentos-->
+            <!--Listar Departamentos-->
         </select>
         <select id="tipos">
             <!--Tipos de lugares-->
@@ -34,7 +42,7 @@
 </main>
 
 <script src="ASSETS/JS/app.js"></script>
-<script src="ASSETS/JS/destinos.js"></script> 
+<script src="ASSETS/JS/destinos.js"></script>
 </body>
 
 </html>

@@ -385,7 +385,7 @@ for (const viaje of viajes) {
         <img src="ASSETS/IMG/DESTINOS/unnamed(${img}).jpg">
         <div> 
           <h1>${nombre}</h1>
-          <span>
+          <span class="contViaje">
               <p>Departamento: ${departamento}</p>
               <p>Precio por noche: ${costo}</p>
               <p>${info}</p> 

@@ -69,3 +69,11 @@ main {
 .opcionDestino {
     border: solid 1px whitesmoke;
 }
+
+li div h1 {
+    text-align: center;
+}
+
+.contViaje p {
+    margin: 2rem;
+}
