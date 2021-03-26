@@ -22,9 +22,19 @@ img {
     max-width: 100%;
 }
 
-.contenedor {
-    width: 95%;
+nav {
+    display: flex;
     margin: auto;
+    text-align: center;
+    padding: 3rem;
+    width: 80%;
+    
+    a {
+        margin: auto;
+        justify-content: space-between;
+        text-decoration: none;
+        font-size: 3rem;
+    }
 }
 
 .titulosDeSecciones {
@@ -34,12 +44,32 @@ img {
     margin-top: 0;
 }
 
-.resultados {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 1rem;
+.contenedor {
+    width: 95%;
+    margin: auto;
+
+    .cajaOpciones {
+        padding: 2rem;
+        background-color: rgba(52, 99, 117, 0.664);
+        width: 95%;
+        margin: 2rem auto;
+    }
+
+    .resultados {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+
+        @media(max-width:720px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
+
+
+
+
 
 ul {
     padding: 0;
@@ -57,12 +87,7 @@ main {
     border-radius: 15px;
 }
 
-.cajaOpciones {
-    padding: 2rem;
-    background-color: rgba(52, 99, 117, 0.664);
-    width: 95%;
-    margin: 2rem auto;
-}
+
 
 
 /*Lugares*/
@@ -76,4 +101,9 @@ li div h1 {
 
 .contViaje p {
     margin: 2rem;
+}
+
+//Ocular
+.ocultar {
+    display: none;
 }

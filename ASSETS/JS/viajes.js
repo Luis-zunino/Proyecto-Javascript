@@ -1,0 +1,406 @@
+const DESCUENTO = [
+  {
+      total: 0,
+      factor: 1 //SIN DESCUENTO
+  },
+  {
+      total: 1,
+      factor: 0.90 //10% OFF
+  },
+  {
+      total: 2,
+      factor: 0.85 //15% OFF
+  },
+  {
+      total: 3,
+      factor: 0.80 //20% OFF
+  },
+  {
+      total: 4,
+      factor: 0.75 //25% OFF
+  }
+]
+const MIJSON = [
+{
+    "id":1 ,
+    "tipo": "ciudad",
+    "img": "2",
+    "departamento": "Montevideo",
+    "nombre": "Montevideo",
+    "costo": 500,
+    "info": "Capital de Uruguay conocida por la Ciudad Vieja colonial y art deco, y playas como Pocitos."
+  },
+  {
+    "id":2 ,
+    "tipo": "ciudad",
+    "img": "3",
+    "departamento": "Maldonado",
+    "nombre": "Punta del Este",
+    "costo": 500,
+    "info":  "Ciudad turística uruguaya conocida por la escultura “La Mano”, la playa Mansa y la isla Gorriti."
+  },
+  {
+    "id":3 ,
+    "tipo": "ciudad",
+    "img": "4",
+    "departamento": "Colonia",
+    "nombre": "Colonia del Sacramento",
+    "costo": 500,
+    "info":
+      "Ciudad uruguaya frente al río con su Barrio Histórico bien conservado desde la época colonial"
+  },
+  {
+    "id":4 ,
+    "tipo": "ciudad",
+    "img": "6",
+    "departamento": "Colonia",
+    "nombre": "Río de la Plata",
+    "costo": 500,
+    "info": "Estuario de los ríos Paraná y Uruguay"
+  },
+  {
+    "id":5 ,
+    "tipo": "playa",
+    "img": "7",
+    "departamento": "Rocha",
+    "nombre": "Punta del Diablo",
+    "costo": 500,
+    "info":
+      "Pueblo turístico uruguayo conocido por sus playas, el parque Santa Teresa y la conservación de tortugas."
+  },
+  {
+    "id":6 ,
+    "tipo": "playa",
+    "img": "7",
+    "departamento": "Maldonado",
+    "nombre": "Piriápolis",
+    "costo": 500,
+    "info":
+      " Población costera de Uruguay con vistas desde el cerro de San Antonio y edificios de estilo Belle Époque."
+  },
+  {
+    "id":7 ,
+    "tipo": "ciudad",
+    "img": "8",
+    "departamento": "Durazno",
+    "nombre": "José Ignacio",
+    "costo": 500,
+    "info":
+      "Complejo turístico playero elegante con áreas para surf, coctelerías y restaurantes modernos, además de vistas desde el faro de José Ignacio"
+  },
+  {
+    "id":8 ,
+    "tipo": "ciudad",
+    "img": "9",
+    "departamento": "Salto",
+    "nombre": "Salto",
+    "costo": 500,
+    "info":
+      "Ciudad uruguaya conocida por la animada calle Uruguay, el Teatro Larrañaga del siglo XIX y las aguas termales."
+  },
+  {
+    "id":9 ,
+    "tipo": "ciudad",
+    "img": "10",
+    "departamento": "Rocha",
+    "nombre": "La Paloma",
+    "costo": 500,
+    "info":
+      "Pueblo costero de Uruguay junto al faro del cabo de Santa María, la bahía Grande y la reserva Laguna de Rocha."
+  },
+  {
+    "id":10 ,
+    "tipo": "ciudad",
+    "img": "11",
+    "departamento": "Rocha",
+    "nombre": "Departamento de Rocha",
+    "costo": 500,
+    "info":
+      "Departamento del este de Uruguay con playas en la Punta del Diablo y tortugas marinas en La Coronilla."
+  },
+  {
+    "id":11 ,
+    "tipo": "playa",
+    "img": "12",
+    "departamento": "Maldonado",
+    "nombre": "La Pedrera",
+    "costo": 500,
+    "info": "Playa, surf y deportes acuáticos"
+  },
+  {
+    "id":12 ,
+    "tipo": "playa",
+    "img": "13",
+    "departamento": "Carmelo",
+    "nombre": "Colonia",
+    "costo": 500,
+    "info":
+      "Municipio uruguayo famoso por la Playa Seré, el Río de la Plata y la Rambla de los ituyentes"
+  },
+  {
+    "id":13 ,
+    "tipo": "playa",
+    "img": "14",
+    "departamento": "Rocha",
+    "nombre": "Rocha",
+    "costo": 500,
+    "info": "Playa y parque"
+  },
+  {
+    "id":14 ,
+    "tipo": "ciudad",
+    "img": "15",
+    "departamento": "desconocido",
+    "nombre": "Fray Bentos",
+    "costo": 500,
+    "info": "Teatro, museo, historia, playa y río"
+  },
+  {
+    "id":15 ,
+    "tipo": "ciudad",
+    "img": "16",
+    "departamento": "Rocha",
+    "nombre": "Chuy",
+    "costo": 500,
+    "info": "Parque acuático, playa, compras y parque"
+  },
+  {
+    "id":16 ,
+    "tipo": "ciudad",
+    "img": "17",
+    "departamento": "Canelones",
+    "nombre": "Atlántida",
+    "costo": 500,
+    "info": "Playa, águila y jardín zoológico"
+  },
+  {
+    "id":17 ,
+    "tipo": "ciudad",
+    "img": "18",
+    "departamento": "Rocha",
+    "nombre": "Barra de Valizas",
+    "costo": 500,
+    "info": "Playa"
+  },
+  {
+    "id":18 ,
+    "tipo": "ciudad",
+    "img": "19",
+    "departamento": "Rocha",
+    "nombre": "Termas del Arapey",
+    "costo": 500,
+    "info": "Aguas termales y golf"
+  },
+  {
+    "id":19 ,
+    "tipo": "ciudad",
+    "img": "20",
+    "departamento": "Rocha",
+    "nombre": "Garzón",
+    "costo": 500,
+    "info":
+      "Pueblo uruguayo conocido por el restaurante El Garzón, la bodega Garzón y las playas de José Ignacio."
+  },
+  {
+    "id":20 ,
+    "tipo": "playa",
+    "img": "21",
+    "departamento": "Maldonado",
+    "nombre": "Maldonado",
+    "costo": 500,
+    "info": "Playa, museo e historia"
+  },
+  {
+    "id":21 ,
+    "tipo": "playa",
+    "img": "22",
+    "departamento": "Lavalleja",
+    "nombre": "Minas",
+    "costo": 500,
+    "info": "Parque y naturaleza"
+  },
+  {
+    "id":22 ,
+    "tipo": "ciudad",
+    "img": "23",
+    "departamento": "Rivera",
+    "nombre": "Rivera",
+    "costo": 500,
+    "info": "Casino, bodega, compras y vino"
+  },
+  {
+    "id":23 ,
+    "tipo": "ciudad",
+    "img": "24",
+    "departamento": "Colonia",
+    "nombre": "Nueva Helvecia",
+    "costo": 500,
+    "info": "Historia, monumento y cata de vinos"
+  },
+  {
+    "id":24 ,
+    "tipo": "ciudad",
+    "img": "25",
+    "departamento": "Rocha",
+    "nombre": "San Gregorio de Polanco",
+    "costo": 500,
+    "info": "Playa, pintura, arte y museo"
+  },
+  {
+    "id":25 ,
+    "tipo": "ciudad",
+    "img": "26",
+    "departamento": "Tacuarembó",
+    "nombre": "Tacuarembó",
+    "costo": 500,
+    "info": "Museo, arte y naturaleza"
+  },
+  {
+    "id":26 ,
+    "tipo": "ciudad",
+    "img": "27",
+    "departamento": "Maldonado",
+    "nombre": "Pan de Azúcar",
+    "costo": 500,
+    "info": "Turismo ecológico, parque e historia"
+  },
+  {
+    "id":27 ,
+    "tipo": "ciudad",
+    "img": "28",
+    "departamento": "Lavalleja",
+    "nombre": "Villa Serrana",
+    "costo": 500,
+    "info": "Senderismo"
+  },
+  {
+    "id":28 ,
+    "tipo": "ciudad",
+    "img": "29",
+    "departamento": "Maldonado",
+    "nombre": "Sauce de Portezuelo",
+    "costo": 500,
+    "info": "Playa"
+  },
+  {
+    "id":29 ,
+    "tipo": "ciudad",
+    "img": "30",
+    "departamento": "Paysandú",
+    "nombre": "Paysandú",
+    "costo": 500,
+    "info":
+      "Ciudad uruguaya con el museo histórico, esculturas en el cementerio de Paysandú y baños termales cercanos."
+  },
+  {
+    "id":30 ,
+    "tipo": "ciudad",
+    "img": "31",
+    "departamento": "",
+    "nombre": "Termas del Dayman",
+    "costo": 500,
+    "info": "Aguas termales y parque acuático"
+  },
+  {
+    "id":31 ,
+    "tipo": "ciudad",
+    "img": "32",
+    "departamento": "Canelones",
+    "nombre": "Canelones",
+    "costo": 500,
+    "info": "Bodega, playa, viña, vino y cata de vinos"
+  },
+  {
+    "id":32 ,
+    "tipo": "ciudad",
+    "img": "33",
+    "departamento": "Maldonado",
+    "nombre": "Laguna Garzón",
+    "costo": 500,
+    "info": "Área protegida, kitesurf y windsurf"
+  },
+  {
+    "id":33 ,
+    "tipo": "ciudad",
+    "img": "34",
+    "departamento": "",
+    "nombre": "Manantiales",
+    "costo": 500,
+    "info":
+      "Pueblo animado frente al mar, con surf en la playa Bikini, una intensa vida nocturna, y tiendas y restaurantes modernos."
+  },
+  {
+    "id":34 ,
+    "tipo": "ciudad",
+    "img": "35",
+    "departamento": "Durazno",
+    "nombre": "Durazno",
+    "costo": 500,
+    "info": "Jardín zoológico, monumento e historia"
+  },
+  {
+    "id":35 ,
+    "tipo": "ciudad",
+    "img": "36",
+    "departamento": "Paysandú",
+    "nombre": "Paysandú",
+    "costo": 500,
+    "info": "Monumento, basílica y aguas termales"
+  },
+  {
+    "id":36 ,
+    "tipo": "ciudad",
+    "img": "37",
+    "departamento": "San José",
+    "nombre": "San José de Mayo",
+    "costo": 500,
+    "info": "Catedral, museo e historia"
+  },
+  {
+    "id":37 ,
+    "tipo": "ciudad",
+    "img": "38",
+    "departamento": "Treinta y Tres",
+    "nombre": "Treinta y Tres",
+    "costo": 500,
+    "info": "Naturaleza, río e historia"
+  },
+  {
+    "id":38 ,
+    "tipo": "ciudad",
+    "img": "39",
+    "departamento": "",
+    "nombre": "Aguas Dulces",
+    "costo": 500,
+    "info": "Playa"
+  },
+  {
+    "id":39 ,
+    "tipo": "ciudad",
+    "img": "40",
+    "departamento": "",
+    "nombre": "Punta Colorada",
+    "costo": 500,
+    "info": "Playa y surf"
+  },
+  {
+    "id":40 ,
+    "tipo": "ciudad",
+    "img": "41",
+    "departamento": "Artigas",
+    "nombre": "Artigas",
+    "costo": 500,
+    "info": "Minería, monumento y naturaleza"
+  },
+  {
+    "id":41 ,
+    "tipo": "ciudad",
+    "img": "42",
+    "departamento": "Rocha",
+    "nombre": "Laguna de Rocha",
+    "costo": 500,
+    "info": "Área protegida, humedal y naturaleza"
+  }
+];
+
+

@@ -1,14 +1,12 @@
-//Selecciono el imput  la informacion del usuario mediante el click al boton
-// y lo envio a la funcion guardarnombre
+//Escucho cuando se hace click en el boton enviar y lo notifico con guardarnombre
 document.getElementById("nombreboton").addEventListener("click", guardarnombre);
 
 function guardarnombre() {
-  //Guardo la informacion en una variable
+  //Guardo la informacion del imput en una variable
   var nombreUsuario = textonombre.value;
   //Creo un elemento H1
   var mostrar = document.createElement("h1");
   //Creo el mensaje que quiero mostrar
- 
   var mostrartexto = document.createTextNode(
     `Bienvenido ${nombreUsuario} elige tu destino y nosotros por ti el camino!`
   );
@@ -16,9 +14,12 @@ function guardarnombre() {
   mostrar.appendChild(mostrartexto);
 
   //y vuelvo a adjudicar lo anterior como hijo al h1 que tengo como titulo
-  document.getElementById("formulario").appendChild(mostrar);
+  let mensajeBienvenida = document
+    .getElementById("formulario")
+    .appendChild(mostrar);
 
   localStorage.setItem("User", nombreUsuario);
+  localStorage.setItem("Bienvenida", mensajeBienvenida);
 }
 
 //Listar Departamentos
@@ -45,11 +46,14 @@ let depas = [
   "Treinta y Tres",
 ];
 let depa = document.getElementById("depa");
-let depasLength = depas.length; //Me calcula los elementos del array asi en cada interaccion
-//no me los tiene que caluclar y queda optimizado
+
+let depasLength = depas.length; //Me calcula los elementos del array 
+//asi en cada interaccion no me los tiene que caluclar y queda optimizado
+
 for (i = 0; i < depasLength; i++) {
   depa.innerHTML += `<option id="${i}">${depas[i]}</option>`;
 }
+
 //Tipos de lugares
 let tipo = [
   "--Elige una opción--",
@@ -64,3 +68,4 @@ let tipolength = tipo.length;
 for (i = 0; i < tipolength; i++) {
   tipos.innerHTML += `<option id="${i}">${tipo[i]}</option>`;
 }
+

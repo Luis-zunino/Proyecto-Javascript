@@ -16,13 +16,17 @@
 <!-- Mapa intereactivo con los diferentes puntos de montevideo y etc -->
 <section>
     <h1 id="formulario" class="titulosDeSecciones">
-
-        <input type="text" id="textonombre">
+        <input type="text" id="textonombre" placeholder="Dime tu Nombre">
         <input type="button" id="nombreboton" value="Enviar">
-
     </h1>
-
 </section>
+<div>
+    <span id="viajesEnCarrito">CURSOS EN EL CARRITO: 0</span>
+</div>
+<div>
+    <button id="btnVerCarrito">Ver Carrito</button>
+</div>
+</div>
 <main class="contenedor">
     <div class="cajaOpciones">
         <select id="depa">
@@ -31,18 +35,57 @@
         <select id="tipos">
             <!--Tipos de lugares-->
         </select>
-        <div class="ordenador">
-            <i class="fas fa-sort-numeric-up"></i>
-            <i class="fas fa-sort-alpha-up"></i>
+    </div>
+
+
+    <div>
+
+        <h1>Opciones de Destino</h1>
+
+    </div>
+    <div id="ofertaDeCursos">
+        <div class="contenedor">
+
+            <div class="resultados" id="grillaDeViajes">
+
+
+            </div>
+
         </div>
     </div>
-    <h1>Lugares</h1>
-    <div class="resultados contenedor" id="viajes">
+    <div>
+        <div id="checkOut">
+            <h5>Carrito De Compras</h5>
+            <tdiv>
+                <div>
+                    <div>
+                        <div>DETALLE DE SU COMPRA</div>
+                        <div>IMPORTE</div>
+                    </div>
+                    </thead>
+                    <tbody id="grillaDetalleCheckOut">
+
+
+                </div>
+        </div>
+
+    </div>
+    <div>
+        <button id="btnVolver">Volver al Selector de Viajes</button>
+    </div>
+    <div>
+        <button id="btnFinalizarCompra">Finalizar Compra</button>
+    </div>
     </div>
 </main>
 
+
+
+
+<script src="ASSETS/JS/classviaje.js"></script>
+<script src="ASSETS/JS/viajes.js"></script>
+<script src="ASSETS/JS/app2.js"></script>
 <script src="ASSETS/JS/app.js"></script>
-<script src="ASSETS/JS/destinos.js"></script>
 </body>
 
 </html>
