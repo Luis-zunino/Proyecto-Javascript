@@ -105,8 +105,12 @@ const armoCheckOut = () => {
 
 const alternarListadoViajesCheckout = () => {
   //Alterno la visualización del div cursos y el div checkout
-  ofertaDeViajes.classList.toggle("ocultar");
-  checkOut.classList.toggle("ocultar");
+  jQuery(document).on('click', '#btnVerCarrito', function() {
+    jQuery('#ofertaDeCursos, #checkOut').toggle(500);
+  });
+  
+  // ofertaDeViajes.classList.toggle("ocultar");
+  // checkOut.classList.toggle("ocultar");
 };
 
 const finalizarCompra = () => {
