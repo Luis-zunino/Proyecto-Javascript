@@ -106,7 +106,7 @@ const armoCheckOut = () => {
 const alternarListadoViajesCheckout = () => {
   //Alterno la visualización del div cursos y el div checkout
   jQuery(document).on('click', '#btnVerCarrito', function() {
-    jQuery('#ofertaDeCursos, #checkOut').toggle(500);
+    jQuery('#ofertaDeCursos, #checkOut').toggle(1);
   });
   
   // ofertaDeViajes.classList.toggle("ocultar");
