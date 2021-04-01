@@ -78,3 +78,6 @@ li div h1 {
 
 .ocultar {
   display: none; }
+
+.mostrar {
+  display: block; }

@@ -1,14 +1,14 @@
 //DECLARO VARIABLES
 let viaje = "";
 let carrito = []; //mi carrito de compras
-const btnVerCarrito = document.getElementById("btnVerCarrito");
-const btnVolver = document.getElementById("btnVolver");
-const btnFinalizarCompra = document.getElementById("btnFinalizarCompra");
-const grillaDeViajes = document.getElementById("grillaDeViajes");
-const viajesEnCarrito = document.getElementById("viajesEnCarrito");
-const grillaDetalleCheckOut = document.getElementById("grillaDetalleCheckOut");
-const ofertaDeViajes = document.getElementById("ofertaDeCursos");
-const checkOut = document.getElementById("checkOut");
+const btnVerCarrito = document.querySelector("#btnVerCarrito");
+const btnVolver = document.querySelector("#btnVolver");
+const btnFinalizarCompra = document.querySelector("#btnFinalizarCompra");
+const grillaDeViajes = document.querySelector("#grillaDeViajes");
+const viajesEnCarrito = document.querySelector("#viajesEnCarrito");
+const grillaDetalleCheckOut = document.querySelector("#grillaDetalleCheckOut");
+const ofertaDeViajes = document.querySelector("#ofertaDeCursos");
+const checkOut = document.querySelector("#checkOut");
 
 viaje = new Viajes(carrito);
 
@@ -34,7 +34,7 @@ let cargoDestinos = () => {
     grillaDeViajes.innerHTML += fila;
   }
   //Si existe un localStorage con el carrito almacenado, lo recupero por aquí
-  //recuperoCarrito();
+  recuperoCarrito();
   //localStorage no me sirve para nada, dentro de la función cargoDestinos(), pero como esta última función
   //la llamo cuando se carga el documento HTML, allí es donde la lógica de recuperoCarrito() se aplica
   viaje = new Viajes(carrito);
@@ -131,7 +131,9 @@ btnFinalizarCompra.addEventListener("click", finalizarCompra); //Llamo a la func
 
 const guardoCarrito = () => {
   //Guardo el carrito en localStorage, solo si tiene viajes
-  if (carrito.length > 0) localStorage.carrito = JSON.stringify(carrito);
+  if (carrito.length > 0) {
+    localStorage.carrito = JSON.stringify(carrito);
+  }
 };
 
 const recuperoCarrito = () => {

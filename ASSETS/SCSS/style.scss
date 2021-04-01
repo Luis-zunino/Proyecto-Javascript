@@ -28,7 +28,7 @@ nav {
     text-align: center;
     padding: 3rem;
     width: 80%;
-    
+
     a {
         margin: auto;
         justify-content: space-between;
@@ -106,4 +106,8 @@ li div h1 {
 //Ocular
 .ocultar {
     display: none;
+}
+
+.mostrar {
+    display: block;
 }
