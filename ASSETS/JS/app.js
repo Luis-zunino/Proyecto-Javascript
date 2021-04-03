@@ -47,13 +47,9 @@ let depas = [
 ];
 let depa = document.getElementById("depa");
 
-let depasLength = depas.length; //Me calcula los elementos del array 
-//asi en cada interaccion no me los tiene que caluclar y queda optimizado
-
-for (i = 0; i < depasLength; i++) {
+for (let i in depas) {
   depa.innerHTML += `<option id="${i}">${depas[i]}</option>`;
 }
-
 //Tipos de lugares
 let tipo = [
   "--Elige una opción--",
@@ -64,8 +60,9 @@ let tipo = [
 ];
 let tipos = document.getElementById("tipos");
 
-let tipolength = tipo.length;
-for (i = 0; i < tipolength; i++) {
+for(let i in tipo){
   tipos.innerHTML += `<option id="${i}">${tipo[i]}</option>`;
+
 }
+
 
