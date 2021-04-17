@@ -33,17 +33,17 @@ const cargoDestino = (destino) => {
   let streaming = JSON.stringify(destino);
   if (destino != undefined) {
     const cargoViajes = `
-    
-  <li class="opcionDestino">
-    <img src="ASSETS/IMG/DESTINOS/unnamed(${destino.img}).jpg">
-    <div>
-      <h1>${destino.nombre}</h1>
-      <span class="contViaje">
-          <p>Departamento: ${destino.departamento}</p>
-          <p>Precio por noche: ${destino.costo}</p>
-          <p>${destino.info}</p>
-      </span>
-      </div>`;
+                        <li class="opcionDestino">
+                            <img src="ASSETS/IMG/DESTINOS/unnamed(${destino.img}).jpg">
+                            <div>
+                              <h1>${destino.nombre}</h1>
+                              <span class="contViaje">
+                                  <p>Departamento: ${destino.departamento}</p>
+                                  <p>Precio por noche: ${destino.costo}</p>
+                                  <p>${destino.info}</p>
+                              </span>
+                            </div>
+                        </li>`;
       return cargoViajes;
       //   <button onclick="agregoViajeAlCarrito(${destino.id})">Agregar</button>
   }
