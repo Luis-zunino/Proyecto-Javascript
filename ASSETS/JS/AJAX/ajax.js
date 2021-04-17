@@ -43,9 +43,7 @@ const cargoDestino = (destino) => {
           <p>Precio por noche: ${destino.costo}</p>
           <p>${destino.info}</p>
       </span>
-      </div>
-      </li>
-                    `;
+      </div>`;
       return cargoViajes;
       //   <button onclick="agregoViajeAlCarrito(${destino.id})">Agregar</button>
   }
