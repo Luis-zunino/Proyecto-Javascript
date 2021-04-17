@@ -16,21 +16,22 @@ let cargoDestinos = () => {
   //función con la cual cargamos el array JSON de cursos, en la tabla principal
   grillaDeViajes.innerHTML = "";
   for (let viaje of MIJSON) {
-    let fila = `
-        <ul>
-      <li  class="opcionDestino">
-        <img src="ASSETS/IMG/DESTINOS/unnamed(${viaje.img}).jpg">
-        <div> 
-          <h1>${viaje.nombre}</h1>
-          <span class="contViaje">
-              <p>Departamento: ${viaje.departamento}</p>
-              <p>Precio por noche: ${viaje.costo}</p>
-              <p>${viaje.info}</p> 
-          </span>
-          <button onclick="agregoViajeAlCarrito(${viaje.id})">Agregar</button>
-        </div>
-      </li>
-    </ul>               `;
+     let fila = cargoViajes;
+    //`
+    //     <ul>
+    //   <li  class="opcionDestino">
+    //     <img src="ASSETS/IMG/DESTINOS/unnamed(${viaje.img}).jpg">
+    //     <div> 
+    //       <h1>${viaje.nombre}</h1>
+    //       <span class="contViaje">
+    //           <p>Departamento: ${viaje.departamento}</p>
+    //           <p>Precio por noche: ${viaje.costo}</p>
+    //           <p>${viaje.info}</p> 
+    //       </span>
+    //       <button onclick="agregoViajeAlCarrito(${viaje.id})">Agregar</button>
+    //     </div>
+    //   </li>
+    // </ul>               `;
     grillaDeViajes.innerHTML += fila;
   }
   //Si existe un localStorage con el carrito almacenado, lo recupero por aquí

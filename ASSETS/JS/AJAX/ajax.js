@@ -36,17 +36,17 @@ const cargoDestino = (destino) => {
     <ul>
   <li  class="opcionDestino">
     <img src="ASSETS/IMG/DESTINOS/unnamed(${destino.img}).jpg">
-    <div> 
+    <div>
       <h1>${destino.nombre}</h1>
       <span class="contViaje">
           <p>Departamento: ${destino.departamento}</p>
           <p>Precio por noche: ${destino.costo}</p>
-          <p>${destino.info}</p> 
+          <p>${destino.info}</p>
       </span>
-      <button onclick="agregoViajeAlCarrito(${destino.id})">Agregar</button>
-    </div>
-  </li>
-</ul>               `;
-    return cargoViajes;
+      </div>
+      </li>
+      </ul>               `;
+      return cargoViajes;
+      //   <button onclick="agregoViajeAlCarrito(${destino.id})">Agregar</button>
   }
 };
