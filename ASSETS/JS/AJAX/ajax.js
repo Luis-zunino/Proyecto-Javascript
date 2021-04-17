@@ -17,7 +17,7 @@ $(document).ready(() => {
   });
 });
 
-const contenidoError = `<div class="center red-text">
+const contenidoError = `<div>
                             <h4 >No se pudo recuperar el contenido</h4>
                             <h5>Intente nuevamente en unos segundos...</h5>
                         </div>`;
@@ -33,8 +33,8 @@ const cargoDestino = (destino) => {
   let streaming = JSON.stringify(destino);
   if (destino != undefined) {
     const cargoViajes = `
-    <ul>
-  <li  class="opcionDestino">
+    
+  <li class="opcionDestino">
     <img src="ASSETS/IMG/DESTINOS/unnamed(${destino.img}).jpg">
     <div>
       <h1>${destino.nombre}</h1>
@@ -45,7 +45,7 @@ const cargoDestino = (destino) => {
       </span>
       </div>
       </li>
-      </ul>               `;
+                    `;
       return cargoViajes;
       //   <button onclick="agregoViajeAlCarrito(${destino.id})">Agregar</button>
   }

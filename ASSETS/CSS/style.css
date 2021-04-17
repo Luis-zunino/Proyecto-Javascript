@@ -30,6 +30,11 @@ nav {
     text-decoration: none;
     font-size: 3rem; }
 
+.cabezera {
+  background-image: url(../IMG/DESTINOS/fondo.jpg);
+  background-position: center center;
+  margin-top: 0; }
+
 .titulosDeSecciones {
   text-align: center;
   font-size: 2rem;
